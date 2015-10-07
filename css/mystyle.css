@@ -1,7 +1,25 @@
 
+* {
+    box-sizing: border-box;
+}
+
 body {
 	background-color: #01151B;
     color:fff;
+    margin:0px;
+    padding:0px;
+}
+
+container {
+    width: 960px;
+}
+
+
+.hide {
+    display:none;
+}
+
+body.home {
     background-image: url(../img/maphome.svg);
     background-repeat: no-repeat;
 }
@@ -31,22 +49,26 @@ nav {
     
 }
     
-	li { /*http://thecodeplayer.com/walkthrough/make-a-simple-navigation-with-hover-transitions */
-		display:inline;
-		list-style-type:none;
-		padding:10px;
-        margin:auto;
+	li  a{ /*http://thecodeplayer.com/walkthrough/make-a-simple-navigation-with-hover-transitions */
+
         font-family: "museo-sans-condensed",sans-serif;
         width: 100px; border-left: 3px solid #666;
         cursor: pointer;
         padding: 10px 50px 10px 15px;
-        
         -webkit-transition: all 0.3s ease-in;
         -moz-transition: all 0.3s ease-in;
         -o-transition: all 0.3s ease-in;
-	}	
+	}
 
-nav li:hover{
+
+li {
+    display:inline;
+    list-style-type:none;
+    margin:auto;
+}
+
+
+nav li a:hover, nav li.current_page a{
 	background: #5d6969; 
 	border-left: 5px solid #fff;
     font-weight: bold;
@@ -68,58 +90,88 @@ a:active {
     color:#fff;
 }
 
-#toTop {
-    display:block;
-    position:fixed;
-    top:50%;
-    margin:auto;
-    padding:10px;
-    font-size: 15px;
-    font-family:"museo-sans-condensed",sans-serif;
-}
-.obvid { 
-    position:relative; 
-    margin:40px;
-    font-size:12px;
-    font-family:"museo-sans-condensed",sans-serif;
-    padding-top: 50px;
-}
-
-.obvid video {
-    width:100%
-}
-
-.obvid .caption {
-    position:absolute;
-    left:1px;
-    bottom:60px;
-    width:100%;
-}
-
-.obvid .caption p{
-    font-size:13px;
-    margin:auto;
-    padding:10px 0px;
-    text-align:center;
-    color:C0E5E4;
-}
-
 /* Video style effect: http://stackoverflow.com/questions/3794682/custom-css-for-audio-tag */ 
 
-video:hover, video:focus, video:active  {
--webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
--moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
--webkit-transform: scale(1.05);
--moz-transform: scale(1.05);
-transform: scale(1.05);
+#trailer {
+     position:relative; 
+    margin:40px auto;
+    font-size:12px;
+    font-family:"museo-sans-condensed",sans-serif;
+    padding:0px;
+    width:960px; /* 1920 x 1080 */
+    height:540px;
+    
 }
 
+
+
+.dna {
+/* background-image:; eventually dna background image   */
+    background-color:aqua;
+    position:absolute;
+    width:100px;
+    height:60px;
+    top:240px; /* parent container height minus our container height, divided by 2 i.e. 500/2 - 60/2 */
+    left:430px; 
+}
+
+.dna-point {
+    position:absolute;
+    width:12px;
+    height:12px;
+    border-radius:12px;
+    background-color: aliceblue;
+    cursor: pointer;
+    z-index:10000;
+    box-shadow: 2px 2px 4px 0px #006773;
+    border: 1px dotted #01151B;
+    
+}
+
+.dna-point.clicked {
+    background-color:black;   
+}
+
+.dna-point1 {
+    top:32px;
+    left:16px;
+}
+
+.dna-point2 {
+    top:16px;
+    left:32px;
+}
+
+.dna-point3 {
+    top:40px;
+    left:60px;
+}
+.toggle-vid {
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    z-index:10000;
+}
+.toggle-vid-btn {
+    font-size:20px;
+    font-family:"museo-sans-condensed",sans-serif;
+    padding:12px;
+    cursor:pointer;
+    font-weight: bold;
+}
+
+.toggle-vid-btn:hover {
+    color:C0E5E4;
+    text-shadow: 3px 3px 3px C0E5E4;;
+    
+}
+
+
+
+    
 video {
--webkit-transition:all 0.5s linear;
--moz-transition:all 0.5s linear;
--o-transition:all 0.5s linear;
-transition:all 0.5s linear;
+    width:100%;
+    height:100%;
 -moz-box-shadow: 2px 2px 4px 0px #006773;
 -webkit-box-shadow:  2px 2px 4px 0px #006773;
 box-shadow: 2px 2px 4px 0px #006773;
@@ -128,30 +180,138 @@ box-shadow: 2px 2px 4px 0px #006773;
 border-radius:7px 7px 7px 7px ;
 }
 
+@keyframes growshrink {
+    0%, 100%   { transform: scale(1); }
+    50%  { transform: scale(1.1); }
+}
+
 .helena {
     padding-top:8px;
     margin:auto;
     width:770px;
     padding-bottom: 110px;
+   
+}
 
+.helena img {
+    animation-name: growshrink;
+    animation-duration: 2s;
+    animation-iteration-count: 1; /* we only want it to occur once */
 }
 .scroll {
     font-size: 15px;
     font-family:"museo-sans-condensed",sans-serif;
 }
-.obvid {
-    font-size: 15px;
-    font-family:"museo-sans-condensed",sans-serif;
-}
+
+
+
+
+
 
 /* CLONE ORIGINS */
 
-.cosima {
-    width:155px;
-    postion:absolute;
-    left: 0px;
-    top:0px;
-    z-index:1;
-    margin-left:300px;
+.map-wrapper {
+    background-color:#0a0a0a;
+    margin:0px;
+    padding:0px;
+}
+
+.map {
+    position:relative;
+     width:960px;
+    margin:0 auto;
+}
+
+.map-image {
    
 }
+
+
+.dot {
+    position:absolute;
+    width:12px;
+    height:12px;
+    border-radius:12px;
+    cursor: pointer;
+    z-index:10000;
+    box-shadow: 2px 2px 4px 0px #006773;
+    border: 1px dotted #fff;
+    
+}
+.dot img {
+    display:none;
+    position:absolute;
+    width:120px;
+    left:-54px;
+    top:-190px;
+}
+.dot .modal-content {
+    display:none;
+}
+.dot:hover {
+  background-color: white;
+}
+.dot:hover img {
+    display:block;
+}
+.A {
+    top:60px;
+    left:300px;
+}
+
+.B {
+    top:260px;
+    left:600px;
+}
+
+.C {
+    top:130px;
+    left:350px;
+}
+
+
+
+/* MODAL */
+
+#modal-overlay {
+    display:none;
+    width:100%;
+    height:100%;
+    z-index:20000;
+    position: fixed;
+    background:rgba(0, 0, 0, 0.7);
+}
+
+#modal {
+    display:none;
+    width:960px;
+    min-height:400px;
+    margin:120px auto;
+    background: rgba(255, 255, 255, 0.2);
+    border:1px solid #cecece;
+}
+
+
+#modal-content {
+    margin:24px;
+    color:black;
+}
+
+
+
+/* CAST */
+
+.cast {
+    height:450px;
+    width:574px;
+    margin:20px auto;
+}
+
+.ari, .tat, .jordan {
+    height:300px;
+}
+.ari-text{
+    font-family: "museo-sans-condensed",sans-serif;
+    font-size:12px;
+    text-align: justify;
+    
