@@ -1,0 +1,157 @@
+
+body {
+	background-color: #01151B;
+    color:fff;
+    background-image: url(../img/maphome.svg);
+    background-repeat: no-repeat;
+}
+
+.logo {
+	margin:auto;
+    width: 400px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    
+}
+
+
+nav {
+	color:fff;
+	text-align:center;
+
+}
+
+nav {
+
+   margin:auto;
+    padding-top:50px;
+    overflow:hidden;
+    width:500px;
+    
+    
+}
+    
+	li { /*http://thecodeplayer.com/walkthrough/make-a-simple-navigation-with-hover-transitions */
+		display:inline;
+		list-style-type:none;
+		padding:10px;
+        margin:auto;
+        font-family: "museo-sans-condensed",sans-serif;
+        width: 100px; border-left: 3px solid #666;
+        cursor: pointer;
+        padding: 10px 50px 10px 15px;
+        
+        -webkit-transition: all 0.3s ease-in;
+        -moz-transition: all 0.3s ease-in;
+        -o-transition: all 0.3s ease-in;
+	}	
+
+nav li:hover{
+	background: #5d6969; 
+	border-left: 5px solid #fff;
+    font-weight: bold;
+	color: #01151B;
+    padding-right:20px;
+
+}
+
+a:link {
+    color:C0E5E4; /*light blue*/
+    text-decoration:none; 
+}
+    
+a:visited {
+    color:C0E5E4;
+}
+
+a:active {
+    color:#fff;
+}
+
+#toTop {
+    display:block;
+    position:fixed;
+    top:50%;
+    margin:auto;
+    padding:10px;
+    font-size: 15px;
+    font-family:"museo-sans-condensed",sans-serif;
+}
+.obvid { 
+    position:relative; 
+    margin:40px;
+    font-size:12px;
+    font-family:"museo-sans-condensed",sans-serif;
+    padding-top: 50px;
+}
+
+.obvid video {
+    width:100%
+}
+
+.obvid .caption {
+    position:absolute;
+    left:1px;
+    bottom:60px;
+    width:100%;
+}
+
+.obvid .caption p{
+    font-size:13px;
+    margin:auto;
+    padding:10px 0px;
+    text-align:center;
+    color:C0E5E4;
+}
+
+/* Video style effect: http://stackoverflow.com/questions/3794682/custom-css-for-audio-tag */ 
+
+video:hover, video:focus, video:active  {
+-webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+-moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+-webkit-transform: scale(1.05);
+-moz-transform: scale(1.05);
+transform: scale(1.05);
+}
+
+video {
+-webkit-transition:all 0.5s linear;
+-moz-transition:all 0.5s linear;
+-o-transition:all 0.5s linear;
+transition:all 0.5s linear;
+-moz-box-shadow: 2px 2px 4px 0px #006773;
+-webkit-box-shadow:  2px 2px 4px 0px #006773;
+box-shadow: 2px 2px 4px 0px #006773;
+-moz-border-radius:7px 7px 7px 7px ;
+-webkit-border-radius:7px 7px 7px 7px ;
+border-radius:7px 7px 7px 7px ;
+}
+
+.helena {
+    padding-top:8px;
+    margin:auto;
+    width:770px;
+    padding-bottom: 110px;
+
+}
+.scroll {
+    font-size: 15px;
+    font-family:"museo-sans-condensed",sans-serif;
+}
+.obvid {
+    font-size: 15px;
+    font-family:"museo-sans-condensed",sans-serif;
+}
+
+/* CLONE ORIGINS */
+
+.cosima {
+    width:155px;
+    postion:absolute;
+    left: 0px;
+    top:0px;
+    z-index:1;
+    margin-left:300px;
+   
+}
